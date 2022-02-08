@@ -289,3 +289,32 @@
       </div>
     </div>
   </section>
+
+
+
+  <engine name="browser" spec="6.0.0" />
+  <plugin name="cordova-plugin-fcm-with-dependecy-updated" spec="^7.8.0">
+      <variable name="ANDROID_DEFAULT_NOTIFICATION_ICON" value="@mipmap/ic_launcher" />
+      <variable name="ANDROID_FCM_VERSION" value="21.0.0" />
+      <variable name="ANDROID_FIREBASE_BOM_VERSION" value="26.0.0" />
+      <variable name="ANDROID_GOOGLE_SERVICES_VERSION" value="4.3.4" />
+      <variable name="ANDROID_GRADLE_TOOLS_VERSION" value="3.3.0" />
+  </plugin>
+  <plugin name="cordova-plugin-firebasex" spec="^14.0.0" />
+
+
+
+  <agm-map [latitude]='lat' [longitude]='long' [zoom]='zoom' [scrollwheel]="false">
+    <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng" 
+    [label]="{color: 'white', fontSize: '20px', text: marker.bus_number, }"
+    >
+    <!-- [color]="event.hovered ? 'blue' : 'red'" -->
+      <agm-info-window class="agm-info text-center">
+        <strong>{{ marker.vehicle}}</strong> <br>
+        {{ marker.label }}
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+  [label]="{color: 'white', fontSize: '20px', text: '\ue530', fontFamily: 'Material Icons', title: 'marker.bus_number' }"
+
+  [icon]="{path: 'faBus.icon[4] as string', fillColor: '#0000ff', anchor: 'new google.maps.Point(faBus.icon[0] / 2, faBus.icon[1])', strokeWeight: '1', strokeColor: '#ffffff', scale: '0.075', title: 'marker.bus_number' }"
