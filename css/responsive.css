@@ -226,9 +226,6 @@
 .srch-box {
     top: -18px;
 }
-.sticky .srch-box {
-    top: 0px;
-}
 .sticky .logo svg {
     max-width: 100%;
     transition: 0.2s;
@@ -281,7 +278,7 @@
     position: absolute;
     left: 0;
     right: 17px;
-    top: 0px;
+    top: 4px;
   }
   .box-main {
     margin-top: 5px;
@@ -532,7 +529,7 @@
   .logo-text {
     font-size: 22px !important;
     padding: 0%;
-    width: 85%;
+    width: 44%;
     margin-top: -1%;
   }
 }
@@ -590,7 +587,8 @@
 	
 	
   .pro-box {
-    width: 90%;
+    width: 100%;
+    margin: unset;
   }	
 .pro-text span {
     font-size: 12px;
@@ -619,7 +617,8 @@
   }
 	
 .prtnr-box {
-    width: 42%;
+    width: 100%;
+    margin: unset !important;
 }
 	
 	
@@ -698,4 +697,25 @@
   }
 
 	
+}
+@media only screen and (max-width: 480px) {
+  .banner img {
+    height: 400px !important;
+  }
+  .container {
+    width: unset !important;
+  }
+  .four-spacing .line {
+    margin: unset;
+    width: unset;
+  }
+  .footer-tab {
+    margin-top: -15%;
+  }
+  .right .fa {
+    margin-top: 186px;
+  }
+  .left .fa {
+    margin-top: 186px;
+  }
 }
